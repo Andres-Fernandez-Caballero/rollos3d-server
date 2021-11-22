@@ -1,6 +1,6 @@
 {
   "name": "rollos3dserver",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "Servidor que probee una api para administrar rollo y perfiles de impresion 3d",
   "main": "index.js",
   "scripts": {

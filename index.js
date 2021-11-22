@@ -6,6 +6,13 @@ const app = express();
 app.get('/', (req, res) => {
     res.send(`
     <h1>Rollos 3D</h1>
+
+    <h2>Rutas API</h2>
+    <ul>
+        <li><a href="#">Rollos List </a></li>
+        <li><a href="#">Rollos Detail </a></li>
+    </ul>
+
     <h2>Variables de Entorno</h2>
     <ul>
         <li>Usuario: ${process.env.DATABASE_USER}</li>
