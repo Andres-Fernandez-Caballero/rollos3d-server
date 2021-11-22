@@ -1,0 +1,29 @@
+{
+  "name": "rollos3dserver",
+  "version": "1.0.0",
+  "description": "Servidor que probee una api para administrar rollo y perfiles de impresion 3d",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "3d",
+    "rollos",
+    "perfiles",
+    "express",
+    "server",
+    "api"
+  ],
+  "author": "Andres Fernandez",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "sequelize": "^6.12.0-alpha.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
