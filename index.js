@@ -1,7 +1,11 @@
 const express = require('express');
+const apiRouter = require('./src/routes/apiRouter'); 
+
 require('dotenv').config();
 
 const app = express();
+
+app.use('/api', apiRouter);
 
 app.get('/', (req, res) => {
     res.send(`
@@ -9,7 +13,7 @@ app.get('/', (req, res) => {
 
     <h2>Rutas API</h2>
     <ul>
-        <li><a href="#">Rollos List </a></li>
+        <li><a href="api/v1/rollos">Rollos List </a></li>
         <li><a href="#">Rollos Detail </a></li>
     </ul>
 
