@@ -1,12 +1,14 @@
 {
   "name": "rollos3dserver",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Servidor que probee una api para administrar rollo y perfiles de impresion 3d",
   "main": "index.js",
   "scripts": {
+    "preinstall": "bash ./scripts/preinstall.sh",
+    "postinstall": "bash ./scripts/databaseinstall.sh",
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo test exit 1"
   },
   "keywords": [
     "3d",
@@ -19,8 +21,11 @@
   "author": "Andres Fernandez",
   "license": "ISC",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
+    "env-cmd": "^10.1.0",
     "express": "^4.17.1",
+    "mysql2": "^2.3.3",
     "sequelize": "^6.12.0-alpha.1"
   },
   "devDependencies": {
