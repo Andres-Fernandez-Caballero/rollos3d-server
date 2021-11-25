@@ -1,6 +1,24 @@
+const RolloService = require('./../../services/rollos.service');
+
 const productsApiController = {
     getAll: async (req, res) => {
-        res.send('lista de rollos');
+       try{
+           let rollos = await RolloService.getAll();
+           res.json({
+               data:{
+                   rollos
+               },
+               mensaje: 'ok'
+           });
+       }catch (err){
+           //res.state(500);
+           res.json({
+               data: {
+                   err,
+               },
+               mensaje: 'error'
+           })
+       }
     }
 }
 

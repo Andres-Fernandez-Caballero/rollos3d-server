@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Rollo.init({
-    colorName: DataTypes.STRING,
+    colorNombre: DataTypes.STRING,
     colorHex: DataTypes.STRING,
     temperatura: DataTypes.INTEGER
   }, {
