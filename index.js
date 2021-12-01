@@ -9,23 +9,59 @@ app.use('/api', apiRouter);
 
 app.get('/', (req, res) => {
     res.send(`
-    <h1>Rollos 3D</h1>
+    <head>
+        <title>Dasboard</title>
+        
+        <style>
+            *{
+                color:darkslategray;
+            }
+            body{
+                margin: 2rem 1rem 1rem 2rem;
+            }
+            h1 {
+                color:cornflowerblue;
+            }
+            dt {
+                font-weight: bold;
+                font-size: 1.1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Rollos 3D</h1>
 
     <h2>Rutas API</h2>
-    <ul>
-        <li><a href="api/v1/rollos">Rollos List </a></li>
-        <li><a href="#">Rollos Detail </a></li>
-    </ul>
+    <nav>
+        <ul>
+            <li><a href="api/v1/rollos">Rollos List </a></li>
+            <li><a href="#">Rollos Detail </a></li>
+        </ul>
+    </nav>
+    
 
     <h2>Variables de Entorno</h2>
-    <ul>
-        <li>Usuario: ${process.env.DATABASE_USER}</li>
-        <li>Password: ${process.env.DATABASE_PASSWORD}</li>
-        <li>Nombre: ${process.env.DATABASE_NAME}</li>
-        <li>Host: ${process.env.DATABASE_HOST}</li>
-        <li>Puerto: ${process.env.DATABASE_PORT}</li>
-        <li>Interprete: ${process.env.DATABASE_TYPE}</li>
-    </ul>
+    <dl>
+        <dt>Usuario:</dt>
+        <dd>${process.env.DATABASE_USER}.</dd>
+        
+        <dt>Password:</dt>
+        <dd>${process.env.DATABASE_PASSWORD}</dd>
+        
+        <dt>Nombre:</dt>
+        <dd>${process.env.DATABASE_NAME}</dd>
+        
+        <dt>Host:</dt>
+        <dd>${process.env.DATABASE_HOST}</dd>
+        
+        <dt>Port:</dt>
+        <dd>${process.env.DATABASE_PORT}</dd>
+        
+        <dt>Interprete:</dt>
+        <dd>${process.env.DATABASE_TYPE}</dd>
+    </dl>
+    </body>
+    
     
     `);
 });
@@ -34,6 +70,8 @@ app.listen(process.env.PORT, () => {
     console.log(`=============================`);
     console.log(`Conectado al puerto: ${process.env.PORT}`);
     console.log(`Modo: ${process.env.NODE_ENV}`);
+    console.log('');
+    console.log(`http://localhost:${process.env.PORT}`);
     console.log(`============================`);
 });
 
