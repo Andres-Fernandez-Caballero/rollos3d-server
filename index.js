@@ -31,6 +31,9 @@ app.get('/', (req, res) => {
 });
 
 app.listen(process.env.PORT, () => {
-    console.log("conectado al puerto " + process.env.PORT);
+    console.log(`=============================`);
+    console.log(`Conectado al puerto: ${process.env.PORT}`);
+    console.log(`Modo: ${process.env.NODE_ENV}`);
+    console.log(`============================`);
 });
 
